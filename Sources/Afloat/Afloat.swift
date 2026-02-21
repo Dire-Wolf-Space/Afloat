@@ -244,6 +244,31 @@ extension View {
 // MARK: - Contextual Navigation
 
 extension View {
+    /// Sets up contextual navigation for the view hierarchy.
+    ///
+    /// Apply this modifier to the root of your navigation content (typically a `ScrollView` or `List`)
+    /// to enable contextual navigation titles and subtitles. Child views can then use
+    /// ``SwiftUICore/View/navigationTitle(_:_:)-(_,Text)`` and ``SwiftUICore/View/navigationSubtitle(_:_:)-(_,Text)``
+    /// with ``NavigationStyle/contextual`` to provide dynamic titles.
+    ///
+    /// ```swift
+    /// NavigationStack {
+    ///     ScrollView {
+    ///         ForEach(sections) { section in
+    ///             SectionView(section)
+    ///                 .navigationTitle(.contextual, Text(section.name))
+    ///         }
+    ///     }
+    ///     .contextualNavigation()
+    /// }
+    /// ```
+    ///
+    /// - Note: This modifier must be applied before any contextual navigation titles in the view hierarchy
+    ///   will take effect. Apply it once at the root of your scrollable content.
+    @ViewBuilder
+    public func contextualNavigation() -> some View {
+        modifier(ContextualNavigationModifier(defaultTitle: nil, defaultSubtitle: nil))
+    }
     
     /// Sets up contextual navigation for the view hierarchy.
     ///
