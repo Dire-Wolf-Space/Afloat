@@ -8,6 +8,8 @@
 //  Licensed under the MIT License.
 //
 
+#if DEBUG
+
 import SwiftUI
 
 // MARK: - Example View
@@ -307,3 +309,5 @@ struct Recipe: Identifiable {
 #Preview {
     RecipeBookExample()
 }
+
+#endif
