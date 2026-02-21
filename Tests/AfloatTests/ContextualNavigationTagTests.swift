@@ -58,7 +58,7 @@ struct ContextualNavigationTagTests {
         let text = Text("Test Title")
         let tag = ContextualNavigationTag.title(text)
 
-        #expect(tag.id == "\(text)")
+        #expect(!tag.id.isEmpty, "ID should be generated")
         #expect(tag.eligible == false)
 
         if case .title(let storedText) = tag.storage {
@@ -73,7 +73,7 @@ struct ContextualNavigationTagTests {
         let text = Text("Test Subtitle")
         let tag = ContextualNavigationTag.subtitle(text)
 
-        #expect(tag.id == "\(text)")
+        #expect(!tag.id.isEmpty, "ID should be generated")
         #expect(tag.eligible == false)
 
         if case .subtitle(let storedText) = tag.storage {
@@ -136,11 +136,33 @@ struct ContextualNavigationTagTests {
         #expect(tag.eligible == false)
     }
 
-    @Test("Tags with different text generate different ids")
-    func differentTextGeneratesDifferentIds() {
+    @Test("Each tag instance gets a unique ID")
+    func eachTagInstanceGetsUniqueId() {
         let tag1 = ContextualNavigationTag.title(Text("First"))
         let tag2 = ContextualNavigationTag.title(Text("Second"))
+        let tag3 = ContextualNavigationTag.title(Text("First")) // Same text as tag1
 
+        // All tags should have different IDs since they're different instances
         #expect(tag1.id != tag2.id)
+        #expect(tag1.id != tag3.id)
+        #expect(tag2.id != tag3.id)
+    }
+    
+    @Test("Tags with identical text are distinct instances")
+    func identicalTextCreatesDistinctInstances() {
+        let text = Text("Identical")
+        let tag1 = ContextualNavigationTag.title(text)
+        let tag2 = ContextualNavigationTag.title(text)
+        
+        // Even with identical text, each call creates a unique tag
+        #expect(tag1.id != tag2.id, "Identical text should produce different tag IDs")
+        
+        // But the storage content should be equal
+        if case .title(let text1) = tag1.storage,
+           case .title(let text2) = tag2.storage {
+            #expect(text1 == text2)
+        } else {
+            Issue.record("Expected title storage")
+        }
     }
 }
