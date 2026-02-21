@@ -4,6 +4,9 @@
 //
 //  Created by Adélaïde Humez on 22/07/2025.
 //
+//  Copyright © 2026 Adélaïde. All rights reserved.
+//  Licensed under the MIT License.
+//
  
 import SwiftUI
 

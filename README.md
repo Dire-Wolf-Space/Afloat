@@ -72,7 +72,7 @@ Full API reference and guides are available in the DocC documentation.
 
 ## License
 
-MIT. See [LICENSE.md](LICENSE.md) for details.
+MIT. See [LICENSE](LICENSE) for details.
 
 
 ## Contact

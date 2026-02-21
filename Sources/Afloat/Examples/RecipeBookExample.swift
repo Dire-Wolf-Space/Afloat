@@ -2,7 +2,10 @@
 //  RecipeBookExample.swift
 //  Afloat
 //
-//  A comprehensive example demonstrating Afloat's contextual navigation features.
+//  Created by Adélaïde Sky on 21/02/2026.
+//
+//  Copyright © 2026 Adélaïde. All rights reserved.
+//  Licensed under the MIT License.
 //
 
 import SwiftUI

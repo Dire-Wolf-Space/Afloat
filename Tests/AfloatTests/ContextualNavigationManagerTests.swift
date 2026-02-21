@@ -2,7 +2,10 @@
 //  ContextualNavigationManagerTests.swift
 //  AfloatTests
 //
-//  Created by Claude on 21/02/2026.
+//  Created by Adélaïde Sky on 21/02/2026.
+//
+//  Copyright © 2026 Adélaïde. All rights reserved.
+//  Licensed under the MIT License.
 //
 
 import Testing
