@@ -26,7 +26,7 @@ Afloat provides dynamic navigation titles and subtitles that respond to scroll e
 - **Native Look & Feel** — Animations match iOS's default behavior
 - **Cross-Platform** — iOS, macOS, and visionOS
 - **SwiftUI Native** — Drop-in replacements for standard modifiers
-
+- **Lightweight** — No dependencies, small footprint
 
 ## Installation
 
