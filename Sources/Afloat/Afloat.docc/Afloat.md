@@ -6,6 +6,8 @@ A SwiftUI library for contextual navigation titles that animate based on scroll 
 
 Afloat provides a powerful yet simple API for creating dynamic navigation titles and subtitles that respond to scroll events in your SwiftUI views. Perfect for list-based interfaces where you want the navigation bar to display context about what the user is currently viewing.
 
+![Demo of Afloat in action](Demo.gif)
+
 ### Key Features
 
 - **Contextual Navigation**: Display titles and subtitles that change as users scroll through content

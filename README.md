@@ -13,6 +13,10 @@
   <a href="https://developer.apple.com"><img src="https://img.shields.io/badge/visionOS-26+-000000?logo=apple" alt="visionOS 26+"></a>
 </p>
 
+<div align="center">
+  <img width="600" src="Afloat/Sources/Afloat/Afloat.docc/Resources/Demo.gif" alt="Preview">
+</div>
+
 
 ## Overview
 
