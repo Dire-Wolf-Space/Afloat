@@ -28,7 +28,7 @@ Afloat provides dynamic navigation titles and subtitles that respond to scroll e
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/yourusername/Afloat.git", from: "1.0.0")
+    .package(url: "https://github.com/AdelaideSky/Afloat.git", from: "1.0.0")
 ]
 ```
 
@@ -50,30 +50,12 @@ NavigationStack {
 }
 ```
 
-### Navigation Styles
-
-```swift
-// Standard SwiftUI behavior
-.navigationTitle(.automatic, "Settings")
-
-// Contextual with default settings
-.navigationTitle(.contextual, "Section Title")
-
-// Contextual with custom transition
-.navigationTitle(
-    .contextual(hidesSourceView: true, offset: 20),
-    "Section Title"
-)
-```
-
-**Parameters:**
-- `hidesSourceView` — Fade out source view as it passes under the toolbar
-- `offset` — Additional offset before title appears (positive = later, negative = earlier)
+See [RecipeBookExample.swift](Sources/Afloat/Examples/RecipeBookExample.swift) for a complete example.
 
 
-## Example
+## How It Works
 
-See the complete [RecipeBookExample](Afloat/Sources/Afloat/Examples/RecipeBookExample.swift) for a working implementation.
+Afloat uses SwiftUI's `PreferenceKey` system to track the position of views marked with contextual navigation modifiers. When a view scrolls past the top edge of the screen, its title and subtitle are collected and displayed in the navigation bar. The `ContextualNavigationManager` monitors these preference updates and determines which title should be active based on scroll position, creating smooth transitions between sections.
 
 
 ## Documentation
@@ -81,6 +63,20 @@ See the complete [RecipeBookExample](Afloat/Sources/Afloat/Examples/RecipeBookEx
 Full API reference and guides are available in the DocC documentation.
 
 
+## Roadmap
+
+- [ ] Add support for Large navigation title
+- [ ] More animation options (.numericText etc)
+- [ ] Toolbars support
+
+
 ## License
 
-MIT. See LICENSE for details.
+MIT. See [LICENSE.md](LICENSE.md) for details.
+
+
+## Contact
+
+- [Website](https://adesky.fr/)
+- [Twitter](https://x.com/ade_sky_/)
+- [LinkedIn](https://www.linkedin.com/in/adelaidehumez/)
