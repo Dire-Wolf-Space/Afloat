@@ -14,7 +14,7 @@
 </p>
 
 <div align="center">
-  <img width="600" src="Afloat/Sources/Afloat/Afloat.docc/Resources/Demo.gif" alt="Preview">
+  <img width="600" src="./Sources/Afloat/Afloat.docc/Resources/Demo.gif" alt="Preview">
 </div>
 
 
