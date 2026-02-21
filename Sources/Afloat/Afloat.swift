@@ -279,9 +279,9 @@ extension View {
     /// with ``NavigationStyle/contextual`` to provide dynamic titles.
     ///
     /// - Parameters:
-    ///   - defaultTitleKey: The key to a localized string displayed when no contextual title is visible,
+    ///   - defaultTitle: The key to a localized string displayed when no contextual title is visible,
     ///     such as when the user is at the top of the scroll view. If `nil`, no title is shown by default.
-    ///   - defaultSubtitleKey: The key to a localized string displayed when no contextual subtitle is visible.
+    ///   - defaultSubtitle: The key to a localized string displayed when no contextual subtitle is visible.
     ///     If `nil`, no subtitle is shown by default.
     ///
     /// ```swift
@@ -292,7 +292,7 @@ extension View {
     ///                 .navigationTitle(.contextual, section.name)
     ///         }
     ///     }
-    ///     .contextualNavigation(defaultTitleKey: "all.sections")
+    ///     .contextualNavigation(defaultTitle: "all.sections")
     /// }
     /// ```
     ///
@@ -300,10 +300,10 @@ extension View {
     ///   will take effect. Apply it once at the root of your scrollable content.
     @inlinable
     @_alwaysEmitIntoClient
-    public func contextualNavigation(defaultTitleKey: LocalizedStringKey? = nil, defaultSubtitleKey: LocalizedStringKey? = nil) -> some View {
+    public func contextualNavigation(defaultTitle: LocalizedStringKey? = nil, defaultSubtitle: LocalizedStringKey? = nil) -> some View {
         contextualNavigation(
-            defaultTitle: defaultTitleKey.map { Text($0) },
-            defaultSubtitle: defaultSubtitleKey.map { Text($0) }
+            defaultTitle: defaultTitle.map { Text($0) },
+            defaultSubtitle: defaultSubtitle.map { Text($0) }
         )
     }
     
@@ -315,9 +315,9 @@ extension View {
     /// with ``NavigationStyle/contextual`` to provide dynamic titles.
     ///
     /// - Parameters:
-    ///   - defaultTitleResource: The key to a localized string resource displayed when no contextual title is visible,
+    ///   - defaultTitleResource: The localized string resource displayed when no contextual title is visible,
     ///     such as when the user is at the top of the scroll view. If `nil`, no title is shown by default.
-    ///   - defaultSubtitleResource: The key to a localized string resource displayed when no contextual subtitle is visible.
+    ///   - defaultSubtitleResource: The localized string resource displayed when no contextual subtitle is visible.
     ///     If `nil`, no subtitle is shown by default.
     ///
     /// - Note: This modifier must be applied before any contextual navigation titles in the view hierarchy

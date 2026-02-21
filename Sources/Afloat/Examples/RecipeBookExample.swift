@@ -32,7 +32,7 @@ struct RecipeBookExample: View {
                 }
             }
             // Enable contextual navigation with a default title
-            .contextualNavigation(defaultTitleKey: "Recipe Book")
+            .contextualNavigation(defaultTitle: "Recipe Book")
         }
     }
 }
