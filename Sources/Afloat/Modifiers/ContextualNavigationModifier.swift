@@ -14,8 +14,11 @@ import Observation
 /// A modifier displaying underlying view's contextual navigation tags.
 struct ContextualNavigationModifier: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
-    let animation: Animation = .snappy(duration: 0.4, extraBounce: 0.2)
+    @Environment(\.contextualNavigationTransition) var transition
 
+    let appearAnimation: Animation = .snappy(duration: 0.4, extraBounce: 0.2)
+    let transitionAnimation: Animation = .snappy(duration: 0.2, extraBounce: 0.2)
+    
     @State private var manager: ContextualNavigationManager
     
     init(defaultTitle: Text? = nil, defaultSubtitle: Text? = nil) {
@@ -51,10 +54,13 @@ struct ContextualNavigationModifier: ViewModifier {
         manager.title
             .font(.headline)
         
+            .contentTransition(transition)
+            .animation(transitionAnimation, value: manager.title)
+        
             .modifier(
                 NavigationTitleAppearAnimationModifier(
                     isVisible: manager.showTitle,
-                    animation: animation
+                    animation: appearAnimation
                 )
             )
     }
@@ -65,6 +71,9 @@ struct ContextualNavigationModifier: ViewModifier {
         manager.subtitle
             .font(.caption2.weight(.medium))
         
+            .contentTransition(transition)
+            .animation(transitionAnimation, value: manager.subtitle)
+        
             .opacity(0.5)
             .blendMode(colorScheme == .dark ? .plusLighter : .plusDarker)
             .offset(x: 0.2) // Fix a small drift
@@ -72,7 +81,7 @@ struct ContextualNavigationModifier: ViewModifier {
             .modifier(
                 NavigationTitleAppearAnimationModifier(
                     isVisible: manager.showSubtitle,
-                    animation: animation
+                    animation: appearAnimation
                         .delay(manager.showSubtitle && manager.showTitle && manager.defaultTitle == nil ? 0.05 : 0) // Small delay on appear
                 )
             )

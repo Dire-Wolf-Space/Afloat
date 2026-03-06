@@ -60,6 +60,8 @@ struct VisibilityAwareModifier: ViewModifier {
     }
 }
 
+// MARK: - Interface
+
 extension View {
     /// Adds a closure that's called whenever the view's visibility changes relative to its scroll container.
     ///

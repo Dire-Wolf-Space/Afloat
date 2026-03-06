@@ -92,6 +92,9 @@ final class ContextualNavigationManager {
     private func updateNavigationElements() {
         // Find the last title and subtitle in the stack
         if let latestTitle = findText(in: tagStack, matching: \.isTitle, position: .last) {
+            if latestTitle != title {
+                title = latestTitle
+            }
             title = latestTitle
             showTitle = true
         } else if let defaultTitle {
@@ -101,7 +104,9 @@ final class ContextualNavigationManager {
         }
         
         if let latestSubtitle = findText(in: tagStack, matching: \.isSubtitle, position: .last) {
-            subtitle = latestSubtitle
+            if latestSubtitle != subtitle {
+                subtitle = latestSubtitle
+            }
             showSubtitle = true
         } else if let defaultSubtitle {
             subtitle = defaultSubtitle

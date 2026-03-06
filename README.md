@@ -56,6 +56,10 @@ NavigationStack {
 
 See [RecipeBookExample.swift](Sources/Afloat/Examples/RecipeBookExample.swift) for a complete example.
 
+## Customization
+
+Use `.contextualNavigationTransition()` to customize the animation between titles (e.g., `.opacity`, `.numericText()`, `.interpolate`). Defaults to `.identity`.
+
 
 ## How It Works
 
@@ -70,7 +74,7 @@ Full API reference and guides are available in the DocC documentation.
 ## Roadmap
 
 - [ ] Add support for Large navigation title
-- [ ] More animation options (.numericText etc)
+- [x] More animation options (.numericText etc)
 - [ ] Toolbars support
 
 

@@ -28,6 +28,10 @@ Afloat provides a powerful yet simple API for creating dynamic navigation titles
 - ``SwiftUICore/View/navigationSubtitle(_:_:)-(_,Text)``
 - ``SwiftUICore/View/contextualNavigation(defaultTitle:defaultSubtitle:)-(Text?,_)``
 
+### Customization
+
+- ``SwiftUICore/View/contextualNavigationTransition(_:)``
+
 ### Utilities
 
 - ``NavigationStyle``
